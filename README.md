@@ -13,21 +13,5 @@ Testing123
 bikeshare.py
 
 ### Credits
-<<<<<<< HEAD
-<<<<<<< HEAD
-github FAQ
-||||||| merged common ancestors
-||||||| merged common ancestors
-<<<<<<<<< Temporary merge branch 1
-github FAQ
-||||||||| merged common ancestors
-=======
-<<<<<<< HEAD
 git FAQ.
-||||||| merged common ancestors
->>>>>>> master
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-=======
-git FAQ. 
->>>>>>> documentation
 
