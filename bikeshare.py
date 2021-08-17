@@ -13,7 +13,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Hello! Let\'s explore some US bike share data!')
     print('Available Cities: ', [*CITY_DATA])
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
@@ -26,7 +26,7 @@ def get_filters():
             break
 
     # get user input for month (all, january, february, ... , june)
-    MONTH_DATA = {'january','february','march','april','may','june','all'}
+    MONTH_DATA = {'january', 'february', 'march', 'april', 'may', 'june', 'all'}
     while True:
         v_month = input('What month would you like to check? Enter All to view all data available ')
         if v_month not in MONTH_DATA:
@@ -36,7 +36,7 @@ def get_filters():
             break
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    DAY_DATA = {'monday','tuesday','wednesday','thursday','friday','saturday','sunday','all'}
+    DAY_DATA = {'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all'}
     while True:
         v_day = input('What day? Enter monday, tuesday etc ')
         if v_day not in DAY_DATA:
@@ -137,8 +137,9 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+
 def user_stats(df,city):
-    """Displays statistics on bikeshare users."""
+    """Displays statistics on bike share users."""
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
@@ -164,17 +165,18 @@ def user_stats(df,city):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-def main():
-        city,month,day = get_filters()
-        df = load_data(city,month,day)
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
-        user_stats(df,city)
 
-        raw_display = input('\nWould you like to see the raw data? Enter yes or no.\n')
-        if raw_display.lower() == 'yes':
-            print(df.head())
+def main():
+    city, month, day = get_filters()
+    df = load_data(city)
+    time_stats(df)
+    station_stats(df)
+    trip_duration_stats(df)
+    user_stats(df,city)
+
+    raw_display = input('\nWould you like to see the raw data? Enter yes or no.\n')
+    if raw_display.lower() == 'yes':
+        print(df.head())
 
 
 if __name__ == "__main__":
