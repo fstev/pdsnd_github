@@ -1,9 +1,8 @@
 import time
 import pandas as pd
 
-CITY_DATA = {'chicago': 'chicago.csv',
-              'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+CITY_DATA = {'chicago': 'chicago.csv', 'new york city': 'new_york_city.csv', 'washington': 'washington.csv'}
+
 
 def get_filters():
     """
@@ -48,10 +47,10 @@ def get_filters():
 
     print('-'*40)
     return v_city, v_month, v_day
+    #get_filters()
 
-#get_filters()
 
-def load_data(city,month,day):
+def load_data(city):
     """
     Loads data for the specified city and filters by month and day if applicable.
 
@@ -94,6 +93,7 @@ def time_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
 
+
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -116,6 +116,7 @@ def station_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
