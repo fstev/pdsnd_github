@@ -13,5 +13,11 @@ Testing123
 bikeshare.py
 
 ### Credits
-github FAQ
+<<<<<<< HEAD
+git FAQ.
+||||||| merged common ancestors
+It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+=======
+git FAQ. 
+>>>>>>> documentation
 
